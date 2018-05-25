@@ -52,12 +52,12 @@ class DOMNodeCollection {
   }
   parent() {
   let nodeParents = [];
-      this.array.forEach( (el) => {
-        if(!nodeParents.includes(el.parentElement)){
-          nodeParents.push(el.parentElement);
-        }
-      });
-      return new DOMNodeCollection(nodeParents);
+    this.array.forEach( (el) => {
+      if(!nodeParents.includes(el.parentElement)){
+        nodeParents.push(el.parentElement);
+      }
+    });
+    return new DOMNodeCollection(nodeParents);
   }
   find(selector){ul
     let result = [];
@@ -80,11 +80,10 @@ class DOMNodeCollection {
   }
 
   off(type) {
-  this.array.forEach( el => {
-    el.removeEventListener(type, el.callback)
-  });
+    this.array.forEach( el => {
+      el.removeEventListener(type, el.callback)
+    });
   }
-
 
 }
 
