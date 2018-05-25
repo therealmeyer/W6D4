@@ -89,7 +89,7 @@ eval("class DOMNodeCollection {\n  constructor(array){\n    this.array = array;\
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("const DOMNodeCollection = __webpack_require__(/*! ./dom_node_collection.js */ \"./lib/dom_node_collection.js\");\n\nwindow.$l = function (selector) {\n  let result = [];\n\n  if (selector instanceof HTMLElement) {\n    result.push(selector);\n    return new DOMNodeCollection(result);\n  }\n\n  const test = document.querySelectorAll(selector);\n\n  return new DOMNodeCollection(test);\n}\n\n\n//# sourceURL=webpack:///./lib/main.js?");
+eval("const DOMNodeCollection = __webpack_require__(/*! ./dom_node_collection.js */ \"./lib/dom_node_collection.js\");\n\nwindow.$l = function (selector) {\n  let result = [];\n  // let functions = [];\n  // functions.push(onload);\n  // document.addEventListener(\"DOMContentLoaded\", () => {\n  //   functions.forEach((func) => func());\n  // });\n  if (selector instanceof HTMLElement) {\n    result.push(selector);\n    return new DOMNodeCollection(result);\n  }\n\n  const test = document.querySelectorAll(selector);\n\n  return new DOMNodeCollection(test);\n}\n\n\n//# sourceURL=webpack:///./lib/main.js?");
 
 /***/ })
 
