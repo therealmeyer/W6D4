@@ -71,6 +71,21 @@ class DOMNodeCollection {
     this.array.forEach ( (el) => el.innerHTML = "");
     this.array = [];
   }
+
+  on(type, callback) {
+    this.array.forEach( el => {
+      el.callback = callback;
+      el.addEventListener(type, callback)
+    });
+  }
+
+  off(type) {
+  this.array.forEach( el => {
+    el.removeEventListener(type, el.callback)
+  });
+  }
+
+
 }
 
 module.exports = DOMNodeCollection;
